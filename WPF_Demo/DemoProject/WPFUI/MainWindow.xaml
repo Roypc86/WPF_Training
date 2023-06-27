@@ -31,8 +31,36 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Text="First Name" FontWeight="Bold"/>
         <TextBox x:Name="firtNameText" Grid.Column="2" Grid.Row="2" Width="150"/>
 
-        <Button x:Name="submitButton" Content="Run Me" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="6" Click="submitButton_Click"/>
+        <ComboBox x:Name="myComboBox" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="6">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="20" Width="20" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\user_icon.jpg"/>
+                        <TextBlock Text="{Binding FullName}"/>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        
+        <Button x:Name="submitButton" Content="Run Me" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="6" Click="submitButton_Click"/>
 
+        <!--<Image Grid.Column="4" Grid.Row="1" Grid.RowSpan="6" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\Tile-min-3.jpg"/>-->
+        <!--<MediaElement Grid.Column="4" Grid.Row="1" Grid.RowSpan="6" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\examplevideo.mp4"/>-->
+        <ScrollViewer Grid.Column="4" Grid.Row="1" Grid.RowSpan="6">
+            <StackPanel  Orientation="Vertical">
+                <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\1.jpg"/>
+                <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\2.jpg"/>
+                <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\3.jpg"/>
+                <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\4.jpg"/>
+            </StackPanel>
+        </ScrollViewer>
 
+        <!--<WrapPanel Grid.Column="4" Grid.Row="1" Grid.RowSpan="6" Orientation="Horizontal">
+            <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\1.jpg"/>
+            <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\2.jpg"/>
+            <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\3.jpg"/>
+            <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\XPC\source\repos\WPF_Training\WPF_Demo\DemoProject\WPFUI\Assets\4.jpg"/>
+        </WrapPanel>-->
     </Grid>
 </Window>
